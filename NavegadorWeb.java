@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  * Clase que simula el funcionamiento básico del historial de un navegador web.
- * Utiliza dos pilas para gestionar las páginas anteriores y siguientes.
+ * Utiliza dos pilas (Stacks) para gestionar las páginas anteriores y siguientes.
  */
 public class NavegadorWeb {
     // Atributos de la clase
@@ -29,7 +29,7 @@ public class NavegadorWeb {
     /**
      * Visita una nueva URL.
      * Guarda la página actual en la pila de atrás y borra el historial de adelante.
-     *  La dirección web que se desea visitar.
+     * @param url La dirección web que se desea visitar.
      */
     public void visitarPagina(String url){
         pilaAtras.push(paginaActual);
@@ -79,7 +79,7 @@ public class NavegadorWeb {
         String url;
 
         while(true){
-            System.out.println("\n--- MENÚ DEL NAVEGADOR ---");
+            System.out.println("\n--- MENU DEL NAVEGADOR ---");
             System.out.println("1. Visitar página");
             System.out.println("2. Ir atrás");
             System.out.println("3. Ir adelante");
@@ -88,7 +88,7 @@ public class NavegadorWeb {
             System.out.print("Elige una opción: ");
             
             int opcion = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine(); // Limpiar el buffer del scanner
 
             switch(opcion){
                 case 1:
