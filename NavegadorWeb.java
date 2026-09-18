@@ -26,7 +26,7 @@ public class NavegadorWeb {
         paginaActual = "Acerca de : Blanco";    
     }
 
-    /**
+   /**
      * Visita una nueva URL.
      * Guarda la página actual en la pila de atrás y borra el historial de adelante.
      * @param url La dirección web que se desea visitar.
@@ -36,7 +36,6 @@ public class NavegadorWeb {
         paginaActual = url;
         pilaAdelante.clear(); // Al visitar una web nueva, se pierde el historial "hacia adelante"
     }
-
     /**
      * Navega a la página anterior en el historial.
      * Guarda la página actual en la pila "adelante" antes de retroceder.
